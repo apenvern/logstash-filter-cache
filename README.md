@@ -30,6 +30,16 @@ Get data from cache and put in a field
    }
 ```
 
+Both `key` and `value` can take a sprintf-style string to leverage the content of the event 
+```javascript
+   filter {
+     cache {
+       key => "%{key}"
+       value => "%{value}"
+     }
+   }
+```
+
 ## Example
 
 ```sh
